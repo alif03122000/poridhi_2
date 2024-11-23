@@ -17,3 +17,9 @@ jobs:
       - name: Build Docker Image
         run: |
           docker build -t my-docker-image:latest .
+
+
+      # Step 3: Build Docker image
+      - name: Run Docker Image
+        run: |
+          docker run --name my-docker-container my-docker-image:latest
