@@ -6,10 +6,10 @@ services:
     ports:
       - "5000:5000"
     environment:
-      MYSQL_HOST: db
-      MYSQL_USER: alif
-      MYSQL_PASSWORD: 12345
-      MYSQL_DATABASE: MyDb
+      MYSQL_HOST: localhost
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
+      MYSQL_DATABASE: test_db
     depends_on:
       - db
 
@@ -18,10 +18,10 @@ services:
     container_name: mysql_container
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: 123456789
-      MYSQL_DATABASE: MyDb
-      MYSQL_USER: alif
-      MYSQL_PASSWORD: 12345
+      MYSQL_ROOT_PASSWORD: 123456
+      MYSQL_DATABASE: dest_db
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
     ports:
       - "3306:3306"
     volumes:
